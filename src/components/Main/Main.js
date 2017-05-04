@@ -31,8 +31,8 @@ export default class Main extends Component {
       }
     })
     .then((data) => {
-      console.log('in then statement!!')
-      this.setState({Results: data})
+      console.log('in then statement!! data: ', data)
+      this.setState({Results: data.data})
     })
     .catch((err) => console.log('err: ', err));
   }
@@ -72,7 +72,9 @@ export default class Main extends Component {
       }
   }
 
-
+  restart(){
+    this.setState({Results: null})
+  }
 
 
   addA(){
@@ -108,13 +110,19 @@ render() {
 
     return (
       <div className="result">
-        <h1>{this.state.Results.name}</h1>
+        <h1>You got...</h1>
+        <img src={this.state.Results.image_url} />
+        <h2>{this.state.Results.name}!</h2>
+        <h3>That means you are {this.state.Results.qualities}</h3>
+        <p>{this.state.Results.about}</p>
+        <button onClick={this.restart.bind(this)}>Start Over</button>
       </div>
     )
   } else {
 
   return (
       <div>
+        <h1>Which Bob's Burgers Character Are You?</h1>
         <div className="questions">
           <Questions
             addA={this.addA.bind(this)}

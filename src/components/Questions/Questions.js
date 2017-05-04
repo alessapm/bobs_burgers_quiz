@@ -8,12 +8,6 @@ export default class Questions extends Component {
 
         this.state = {
           questions: [
-          {question: "What is your name?",
-          A: "Bob",
-          B:"Linda",
-          C: "Tina",
-          D: "Gene",
-          E: "Louise"},
           {question: "What is your favorite color?",
           A: "Gray",
           B: "Red",
@@ -25,7 +19,25 @@ export default class Questions extends Component {
           B: "Food, hah, does wine count??",
           C: "ummmmm...burgers?",
           D: "Pizza! No, burgers--wait no fried chicken!",
-          E: "The flesh of my enemies"}
+          E: "The flesh of my enemies"},
+          {question: "What are you most afriad of?",
+          A: "Failure",
+          B: "Getting laughed off stage",
+          C: "Rejection",
+          D: "Snakes",
+          E: "Being an adult"},
+          {question: "What is your ideal halloween costume?",
+          A: "Aren't we a little old for halloween?",
+          B: "Mermaid",
+          C: "Mummy",
+          D: "Queen Latifa",
+          E: "Edward Scissorhands"},
+          {question: "Pick a quote",
+          A: "I didn't say it was funny. I just said I figured it out.",
+          B: "Whoo, throw a ripped wedding dress on this daiquiri 'cause it is not a virgin",
+          C: "My heart just pooped its pants.",
+          D: "My life is more difficult than anyone else's on the planet. And yes, I'm including starving children, so don't ask!",
+          E: "You smell like ointment and pee!"}
           ],
 
           index: 0
