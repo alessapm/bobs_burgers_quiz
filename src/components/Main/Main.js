@@ -73,7 +73,12 @@ export default class Main extends Component {
   }
 
   restart(){
-    this.setState({Results: null})
+    this.setState({Results: null});
+    this.setState({As: 0});
+    this.setState({Bs: 0});
+    this.setState({Cs: 0});
+    this.setState({Ds: 0});
+    this.setState({Es: 0});
   }
 
 
