@@ -14,15 +14,8 @@ export default class Main extends Component {
       Es: 0,
       CharacterId: 0,
       Results: null
-
     }
   }
-
-  componentDidMount(){
-    console.log("in Main component");
-  }
-
-
 
   getResult(characterId){
     Axios.get(`http://localhost:8000/characters/${characterId}`, {
@@ -74,11 +67,11 @@ export default class Main extends Component {
 
   restart(){
     this.setState({Results: null});
-    this.setState({As: 0});
-    this.setState({Bs: 0});
-    this.setState({Cs: 0});
-    this.setState({Ds: 0});
-    this.setState({Es: 0});
+    this.setState({As: 0})
+    this.setState({Bs: 0})
+    this.setState({Cs: 0})
+    this.setState({Ds: 0})
+    this.setState({Es: 0})
   }
 
 
