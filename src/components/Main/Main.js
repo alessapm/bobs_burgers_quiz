@@ -113,7 +113,7 @@ render() {
         <h2>{this.state.Results.name}!</h2>
         <h3>That means you are {this.state.Results.qualities}</h3>
         <p>{this.state.Results.about}</p>
-        <button onClick={this.restart.bind(this)}>Start Over</button>
+        <button onClick={this.restart.bind(this)} className="btn btn-danger">Start Over</button>
       </div>
     )
   } else {
@@ -121,7 +121,7 @@ render() {
   return (
       <div>
         <h1>Which Bob's Burgers Character Are You?</h1>
-        <div className="questions">
+        <div className="container-fluid">
           <Questions
             addA={this.addA.bind(this)}
             addB={this.addB.bind(this)}

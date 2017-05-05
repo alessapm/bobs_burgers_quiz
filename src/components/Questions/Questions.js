@@ -83,7 +83,7 @@ export default class Questions extends Component {
     return(
      <div className='question-wrapper'>
         {questions[this.state.index]}
-        <button onClick={this.next.bind(this)}>NEXT</button>
+        <button onClick={this.next.bind(this)} className="btn btn-warning btn-lg active">NEXT</button>
       </div>
 
     )
