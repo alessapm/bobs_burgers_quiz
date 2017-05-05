@@ -1,0 +1,26 @@
+
+img {
+  height: 300px;
+}
+
+input {
+  display: block;
+  margin: 0;
+}
+
+
+.question-answers {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.question-answers p {
+  height: 40px;
+  width: 80%;
+  display: block;
+  font-size: 2rem;
+}
+
+.result {
+  margin-bottom: 20px;
+}

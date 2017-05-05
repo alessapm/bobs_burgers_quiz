@@ -108,19 +108,22 @@ render() {
 
     return (
       <div className="result">
-        <h1>You got...</h1>
-        <img src={this.state.Results.image_url} />
-        <h2>{this.state.Results.name}!</h2>
-        <h3>That means you are {this.state.Results.qualities}</h3>
-        <p>{this.state.Results.about}</p>
-        <button onClick={this.restart.bind(this)} className="btn btn-danger">Start Over</button>
+        <h1 className="text-danger center-block container text-center">Which Bob's Burgers <br /> Character Are You?</h1>
+        <div className="container">
+          <h2 className="text-warning">You got...{this.state.Results.name}!</h2>
+          <img src={this.state.Results.image_url} className="center-block"/>
+
+          <h3 className="text-info">That means you are {this.state.Results.qualities}</h3>
+          <p className="text-info">{this.state.Results.about}</p>
+        </div>
+        <button onClick={this.restart.bind(this)} className="btn btn-danger center-block">Start Over</button>
       </div>
     )
   } else {
 
   return (
       <div>
-        <h1>Which Bob's Burgers Character Are You?</h1>
+        <h1 className="text-danger center-block container text-center">Which Bob's Burgers <br />Character Are You?</h1>
         <div className="container-fluid">
           <Questions
             addA={this.addA.bind(this)}

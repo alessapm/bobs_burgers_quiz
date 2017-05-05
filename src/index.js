@@ -3,7 +3,8 @@ import ReactDom from 'react-dom';
 import { Route, Router, browserHistory } from 'react-router';
 
 import "./vendor/bootstrap-3.3.7-dist/css/bootstrap-theme.css";
-
+import "./vendor/bootstrap-3.3.7-dist/css/bootstrap.css";
+import "./styles/style.css";
 
 import Main from './components/Main/Main';
 
