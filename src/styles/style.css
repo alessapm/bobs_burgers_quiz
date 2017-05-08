@@ -19,8 +19,15 @@ input {
   width: 80%;
   display: block;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .result {
   margin-bottom: 20px;
+}
+
+.active {
+  background-color: rgba(150,150,150,.8);
+  z-index: 5;
+
 }

@@ -13,7 +13,7 @@ export default class Main extends Component {
       Ds: 0,
       Es: 0,
       CharacterId: 0,
-      Results: null
+      Results: ""
     }
   }
 
@@ -36,7 +36,7 @@ export default class Main extends Component {
 
       let greatest = Math.max(this.state.As, this.state.Bs, this.state.Cs,
       this.state.Ds, this.state.Es);
-      let character = 0;
+      // let character = 0;
 
       console.log('greatest: ', greatest)
 
@@ -75,9 +75,23 @@ export default class Main extends Component {
   }
 
 
+
+shieldComponent() {
+console.log('in shieldComponent')
+  const divStyle = {
+    color: 'rgba(150,150,150,.5)',
+    'z-index': '3',
+  }
+
+  return <div className="answer-choices" style={divStyle}></div>;
+}
+
+
   addA(){
     console.log('A is picked');
     this.setState({As: this.state.As + 1});
+    // document.querySelector('.answer-choices').css({'background': 'rgba(150,150,150,.5)', 'z-index': '2'});
+    this.shieldComponent()
   }
 
   addB(){
