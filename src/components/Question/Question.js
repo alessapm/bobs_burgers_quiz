@@ -5,14 +5,14 @@ export default class Question extends Component {
     super(props);
 
     this.state = {
-      overlay: "question-answers"
+      overlay: "question-answers container"
     }
 
   }
 
   setOverlay(){
     console.log
-    this.setState({overlay: "active"})
+    this.setState({overlay: "overlay"})
   }
 
 
@@ -21,7 +21,7 @@ render() {
     return(
       <div className={this.state.overlay}>
         <h2 className=".col-md-1 text-info">{this.props.question}</h2>
-       <div className="answer-choices container">
+       <div className="answer-choices container-flexible">
           <div className="checkbox inline">
 
             <p className="text-info text-center bg-warning show" onClick={this.props.addA, this.setOverlay.bind(this)}>{this.props.A}</p>

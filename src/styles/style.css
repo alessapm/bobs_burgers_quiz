@@ -16,7 +16,7 @@ input {
 
 .question-answers p {
   height: 40px;
-  width: 80%;
+  width: 100%;
   display: block;
   font-size: 2rem;
   cursor: pointer;
@@ -26,8 +26,21 @@ input {
   margin-bottom: 20px;
 }
 
-.active {
-  background-color: rgba(150,150,150,.8);
+.overlay {
+  background-color: rgba(150,150,150,.9);
+  padding-left: 100px;
+  padding-right: 100px;
   z-index: 5;
+  /*position: fixed;*/
+  top: 110;
+  left: 0;
+}
 
+.overlay p {
+  height: 40px;
+  width: 100%;
+  display: block;
+  font-size: 2rem;
+  z-index: 0;
+  background-color: rgba(150,150,150,.2);
 }
