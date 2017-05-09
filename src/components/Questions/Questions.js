@@ -13,25 +13,36 @@ export default class Questions extends Component {
           B: "Red",
           C: "Blue",
           D: "Yellow",
-          E: "Green"},
+          E: "Green"
+          },
           { question: "What is your favorite food?",
           A: "Burgers, obviously!",
           B: "Food, hah, does wine count??",
           C: "ummmmm...burgers?",
           D: "Pizza! No, burgers--wait no fried chicken!",
-          E: "The flesh of my enemies"},
+          E: "The flesh of my enemies"
+          },
           {question: "What are you most afriad of?",
           A: "Failure",
           B: "Getting laughed off stage",
           C: "Rejection",
           D: "Snakes",
-          E: "Being an adult"},
+          E: "Being an adult"
+          },
           {question: "What is your ideal halloween costume?",
           A: "Aren't we a little old for halloween?",
           B: "Mermaid",
           C: "Mummy",
           D: "Queen Latifa",
-          E: "Edward Scissorhands"},
+          E: "Edward Scissorhands"
+          },
+          {question: "You sometimes feel like...",
+          A: "No one listens to me",
+          B: "I'll settle into a routine and get boring",
+          C: "No one sees the real me",
+          D: "Everyone thinks I'm a screw up",
+          E: "I'm surrounded by idiots"
+          },
           {question: "Pick a quote",
           A: "I didn't say it was funny. I just said I figured it out.",
           B: "Whoo, throw a ripped wedding dress on this daiquiri 'cause it is not a virgin",
@@ -50,7 +61,8 @@ export default class Questions extends Component {
       } else {
         this.setState({
           index: this.state.index + 1
-        })
+        });
+        this.props.removeOverlay()
       }
     }
 
@@ -74,6 +86,8 @@ export default class Questions extends Component {
           addC={this.props.addC}
           addD={this.props.addD}
           addE={this.props.addE}
+          setOverlay={this.props.setOverlay}
+          stateOverlay={this.props.stateOverlay}
 
           />
         )

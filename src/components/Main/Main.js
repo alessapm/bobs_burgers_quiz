@@ -13,7 +13,8 @@ export default class Main extends Component {
       Ds: 0,
       Es: 0,
       CharacterId: 0,
-      Results: ""
+      Results: "",
+      overlay: "question-answers container"
     }
   }
 
@@ -72,46 +73,50 @@ export default class Main extends Component {
     this.setState({Cs: 0})
     this.setState({Ds: 0})
     this.setState({Es: 0})
+    this.setState({overlay: "question-answers container"})
   }
 
 
 
-shieldComponent() {
-console.log('in shieldComponent')
-  const divStyle = {
-    color: 'rgba(150,150,150,.5)',
-    'z-index': '3',
+ setOverlay(){
+    console.log
+    this.setState({overlay: "overlay"})
   }
 
-  return <div className="answer-choices" style={divStyle}></div>;
-}
+  removeOverlay(){
+    this.setState({overlay: "question-answers container"})
+  }
 
 
   addA(){
     console.log('A is picked');
     this.setState({As: this.state.As + 1});
     // document.querySelector('.answer-choices').css({'background': 'rgba(150,150,150,.5)', 'z-index': '2'});
-    this.shieldComponent()
+    this.setOverlay()
   }
 
   addB(){
     console.log('B is picked');
     this.setState({Bs: this.state.Bs + 1});
+    this.setOverlay()
   }
 
   addC(){
     console.log('C is picked');
     this.setState({Cs: this.state.Cs + 1});
+    this.setOverlay()
   }
 
   addD(){
     console.log('D is picked');
     this.setState({Ds: this.state.Ds + 1});
+    this.setOverlay()
   }
 
   addE(){
     console.log('E is picked');
     this.setState({Es: this.state.Es + 1});
+    this.setOverlay()
   }
 
 
@@ -146,6 +151,9 @@ render() {
             addD={this.addD.bind(this)}
             addE={this.addE.bind(this)}
             tallyTotal={this.tallyTotal.bind(this)}
+            setOverlay={this.setOverlay.bind(this)}
+            stateOverlay={this.state.overlay}
+            removeOverlay={this.removeOverlay.bind(this)}
           />
         </div>
       </div>

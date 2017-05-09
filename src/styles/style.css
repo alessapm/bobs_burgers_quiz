@@ -15,11 +15,15 @@ input {
 }
 
 .question-answers p {
-  height: 40px;
+  height: 55px;
   width: 100%;
   display: block;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.question-answers p:hover {
+  color: #EC971F;
 }
 
 .result {
@@ -27,7 +31,7 @@ input {
 }
 
 .overlay {
-  background-color: rgba(150,150,150,.9);
+  background-color: rgba(150,150,150,.6);
   padding-left: 100px;
   padding-right: 100px;
   z-index: 5;
@@ -37,10 +41,20 @@ input {
 }
 
 .overlay p {
-  height: 40px;
+  height: 55px;
   width: 100%;
   display: block;
   font-size: 2rem;
   z-index: 0;
   background-color: rgba(150,150,150,.2);
+  color: rgba(150,150,150,1);
+}
+
+.overlay h2 {
+  width: 100%;
+  display: block;
+  font-size: 3rem;
+  z-index: 0;
+  background-color: rgba(150,150,150,.2);
+  color: rgba(150,150,150,1);
 }

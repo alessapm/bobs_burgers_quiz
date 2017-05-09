@@ -4,51 +4,43 @@ export default class Question extends Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      overlay: "question-answers container"
-    }
+    // this.state = {
+    //   overlay: "question-answers container"
+    // }
 
   }
 
-  setOverlay(){
-    console.log
-    this.setState({overlay: "overlay"})
-  }
+  // setOverlay(){
+  //   console.log
+  //   this.setState({overlay: "overlay"})
+  // }
 
 
 render() {
 
     return(
-      <div className={this.state.overlay}>
+      <div className={this.props.stateOverlay}>
+
         <h2 className=".col-md-1 text-info">{this.props.question}</h2>
        <div className="answer-choices container-flexible">
           <div className="checkbox inline">
-
-            <p className="text-info text-center bg-warning show" onClick={this.props.addA, this.setOverlay.bind(this)}>{this.props.A}</p>
+            <p className="text-info text-center bg-warning show" onClick={this.props.addA}>{this.props.A}</p>
           </div>
 
           <div className="checkbox inline">
-            <input className="checkbox" type="checkbox"
-            onClick={this.props.addB}/>
-            <p className="text-info bg-warning">{this.props.B}</p>
+            <p onClick={this.props.addB} className="text-info text-center bg-warning">{this.props.B}</p>
           </div>
 
           <div className="checkbox inline">
-            <input className="checkbox" type="checkbox"
-            onClick={this.props.addC}/>
-            <p className="text-info bg-warning">{this.props.C}</p>
+            <p onClick={this.props.addC} className="text-info text-center bg-warning">{this.props.C}</p>
           </div>
 
           <div className="checkbox inline">
-            <input className="checkbox" type="checkbox"
-            onClick={this.props.addD}/>
-            <p className="text-info bg-warning">{this.props.D}</p>
+            <p onClick={this.props.addD} className="text-info text-center bg-warning">{this.props.D}</p>
           </div>
 
           <div className="checkbox inline">
-            <input className="checkbox" type="checkbox"
-            onClick={this.props.addE}/>
-            <p className="text-info bg-warning">{this.props.E}</p>
+            <p onClick={this.props.addE} className="text-info text-center bg-warning">{this.props.E}</p>
           </div>
         </div>
       </div>
