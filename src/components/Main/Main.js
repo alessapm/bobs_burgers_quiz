@@ -25,7 +25,7 @@ export default class Main extends Component {
       }
     })
     .then((data) => {
-      console.log('in then statement!! data: ', data)
+
       this.setState({Results: data.data})
     })
     .catch((err) => console.log('err: ', err));
@@ -33,7 +33,6 @@ export default class Main extends Component {
 
 
   tallyTotal(){
-    console.log('in tallyTotal');
 
       let greatest = Math.max(this.state.As, this.state.Bs, this.state.Cs,
       this.state.Ds, this.state.Es);
@@ -78,7 +77,6 @@ export default class Main extends Component {
 
 
  setOverlay(){
-    console.log
     this.setState({overlay: "overlay"})
   }
 
@@ -88,32 +86,30 @@ export default class Main extends Component {
 
 
   addA(){
-    console.log('A is picked');
+
     this.setState({As: this.state.As + 1});
-    // document.querySelector('.answer-choices').css({'background': 'rgba(150,150,150,.5)', 'z-index': '2'});
     this.setOverlay()
   }
 
   addB(){
-    console.log('B is picked');
     this.setState({Bs: this.state.Bs + 1});
     this.setOverlay()
   }
 
   addC(){
-    console.log('C is picked');
+
     this.setState({Cs: this.state.Cs + 1});
     this.setOverlay()
   }
 
   addD(){
-    console.log('D is picked');
+
     this.setState({Ds: this.state.Ds + 1});
     this.setOverlay()
   }
 
   addE(){
-    console.log('E is picked');
+
     this.setState({Es: this.state.Es + 1});
     this.setOverlay()
   }
