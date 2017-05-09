@@ -24,23 +24,23 @@ render() {
         <h2 className=".col-md-1 text-info">{this.props.question}</h2>
        <div className="answer-choices container-flexible">
           <div className="checkbox inline">
-            <p className="text-info text-center bg-warning show" onClick={this.props.addA}>{this.props.A}</p>
+            <p className="text-info text-center center-block bg-warning show" onClick={this.props.addA}>{this.props.A}</p>
           </div>
 
           <div className="checkbox inline">
-            <p onClick={this.props.addB} className="text-info text-center bg-warning">{this.props.B}</p>
+            <p onClick={this.props.addB} className="text-info center-block text-center bg-warning">{this.props.B}</p>
           </div>
 
           <div className="checkbox inline">
-            <p onClick={this.props.addC} className="text-info text-center bg-warning">{this.props.C}</p>
+            <p onClick={this.props.addC} className="text-info center-block text-center bg-warning">{this.props.C}</p>
           </div>
 
           <div className="checkbox inline">
-            <p onClick={this.props.addD} className="text-info text-center bg-warning">{this.props.D}</p>
+            <p onClick={this.props.addD} className="text-info center-block text-center bg-warning">{this.props.D}</p>
           </div>
 
           <div className="checkbox inline">
-            <p onClick={this.props.addE} className="text-info text-center bg-warning">{this.props.E}</p>
+            <p onClick={this.props.addE} className="text-info center-block text-center bg-warning">{this.props.E}</p>
           </div>
         </div>
       </div>

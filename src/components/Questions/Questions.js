@@ -95,9 +95,9 @@ export default class Questions extends Component {
 
 
     return(
-     <div className='question-wrapper container' >
+     <div className='question-wrapper center-block' >
         {questions[this.state.index]}
-        <button onClick={this.next.bind(this)} className="btn btn-warning active center-block">NEXT</button>
+        <button onClick={this.next.bind(this)} className="btn btn-warning active center-block container-flexible">NEXT</button>
       </div>
 
     )
