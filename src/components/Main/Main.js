@@ -19,7 +19,7 @@ export default class Main extends Component {
   }
 
   getResult(characterId){
-    Axios.get(`http://localhost:8000/characters/${characterId}`, {
+    Axios.get(`https://bobs-burgers-quiz-api.herokuapp.com/characters/${characterId}`, {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -43,25 +43,24 @@ export default class Main extends Component {
 
       switch (greatest) {
         case this.state.As:
-          // this.setState({CharacterId: 3})
-          this.getResult(3);
+          this.getResult(1);
           console.log('in switch')
           break;
         case this.state.Bs:
-          this.getResult(4);
+          this.getResult(2);
 
           break;
         case this.state.Cs:
-          // this.setState({CharacterId: 5})
-          this.getResult(5);
+
+          this.getResult(3);
           break;
         case this.state.Ds:
-          // this.setState({CharacterId: 6})
-          this.getResult(6);
+
+          this.getResult(4);
           break;
         case this.state.Es:
-          // this.setState({CharacterId: 7})
-          this.getResult(7);
+
+          this.getResult(5);
           break;
       }
   }
